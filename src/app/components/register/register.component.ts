@@ -39,9 +39,10 @@ export class RegisterComponent implements OnInit {
         {
           id: this.user.id,
           email: this.user.email,
-          profile: this.user.profile
-        }, 
-        this.imgOne, 
+          profile: this.user.profile,
+          especiality: this.user.especiality
+        },
+        this.imgOne,
         this.imgTwo
       );
       this.router.navigate(['/principal']);
@@ -63,7 +64,7 @@ export class RegisterComponent implements OnInit {
 
   saveEspeciality(){
     this.user.especiality.push(this.especiality);
-    console.log(this.user.especiality);
+    //console.log(this.user.especiality);
   }
 
   login(){

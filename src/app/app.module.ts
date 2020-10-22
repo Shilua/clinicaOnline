@@ -12,13 +12,19 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { PantallausuarioComponent } from './components/pantallausuario/pantallausuario.component';
+import { PantallamedicoComponent } from './components/pantallamedico/pantallamedico.component';
+import { PantalladminComponent } from './components/pantalladmin/pantalladmin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    PantallausuarioComponent,
+    PantallamedicoComponent,
+    PantalladminComponent
   ],
   imports: [
     BrowserModule,
