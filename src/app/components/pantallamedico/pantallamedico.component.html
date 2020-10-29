@@ -1,1 +1,62 @@
-<p>pantallamedico works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table">
+                <thead class="bg-danger table-dark">
+                    <tr>
+                        <th>Especialidad</th>
+                        <th>Medico</th>
+                        <th>Dia</th>
+                        <th>Hora</th>
+                        <th>botones varios</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let turno of this.turnosMedico">
+                    <td>{{turno.especialidad}}</td>
+                    <td>{{turno.medico}}</td>
+                    <td>{{turno.dia}}</td>
+                    <td>{{turno.hora}}</td>
+                    <td>
+                        <button class="btn btn-outline-danger btn-sm">Aceptar</button>
+                        <button class="btn btn-outline-danger btn-sm">Rechazar</button>
+                        <button class="btn btn-outline-danger btn-sm">Cancelar</button>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <div class="bg-danger" style="height: 48px;">
+                <h4 style="color: white;">Sacar Turno</h4>    
+            </div>
+            
+            <!-- especialidad,fecha y hora diponibles -->
+            <div class="form-group">
+                <label for="especialidad">Especialidad</label>
+                <select name="" id="especialidad" class="form-control">
+                    <div *ngFor="let esp of this.especialities">
+                        <option value="{{esp}}">{{esp}}</option>
+                    </div>
+                </select>
+            </div>
+            <div class="form-group" >
+                <label for="date">Fecha</label>
+                <select class="form-control">
+                    <div *ngFor="let date of this.dates">
+                        <option value="{{date}}">{{date}}</option>
+                    </div>
+                </select>
+            </div>
+            <div class="form-group" >
+                <label for="turnos">Turnos</label>
+                <select class="form-control">
+                    <div *ngFor="let turno of this.horario">
+                        <option value="{{turno}}">{{turno}}</option>
+                    </div>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-danger btn-block">Cargar turno</button>
+            </div>
+        </div>
+    </div>
+</div>

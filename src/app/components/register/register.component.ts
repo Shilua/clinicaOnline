@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from "../../services/auth.service";
 import { UserService } from "../../services/user.service";
 import { User } from '../../classes/user';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,8 @@ export class RegisterComponent implements OnInit {
   imgTwo:File = null;
 
   constructor(
-    private authSvc:AuthService, 
+    private authSvc:AuthService,
+    private fireAuth:AngularFireAuth, 
     private userSvc:UserService,
     private router: Router
     ) {
@@ -44,6 +46,10 @@ export class RegisterComponent implements OnInit {
         },
         this.imgOne,
         this.imgTwo
+      );
+      this.fireAuth.currentUser.then((user) =>{
+          user.sendEmailVerification();
+        }
       );
       this.router.navigate(['/principal']);
     });
