@@ -1,27 +1,43 @@
 # ClinicaOnline
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+Es un sistema de gestion de turnos, tratando de que la gestion sea simple y en pocos pasos
 
-## Development server
+# Tecnologia
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Se utiliza Angular, bootstrap, typescript y firebase para la base de datos y el storage de archivos
 
-## Code scaffolding
+# caso de uso
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+en el cual el usuario puede seleccionar la especialidad dia y horario que quiere el turno, los medicos pueden cargar su disponibilidad en la cual van a trabajar, aceptar los turnos o rechazarlos y poder cancelarlos, los administradores van a poder crear nuevos administradores y activar medicos
 
-## Build
+# como se usa
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## login
+Para loguearse solo pide email y clave
+![](readme_resource/login.png "Pantalla:")
+ 
+## Registro
+ 
+Es un mismo formulario que nos pide algunos datos
+ 
+![](readme_resource/register.png "Pantalla:")
+  
+luego podemos selecionar si somos especialista o paciente pidiendote datos de cada uno de estos perfiles
+  
+![](readme_resource/paciente.png "Pantalla:")
+   
+![](readme_resource/especialista.png "Pantalla:")
 
-## Running unit tests
+## Pantallas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Los distintos perfiles ven distintos tipos de datos
 
-## Running end-to-end tests
+paciente
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+![](readme_resource/usuario.png "Pantalla:")
 
-## Further help
+Medico
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![](readme_resource/medico.png "Pantalla:")
+   
+   
