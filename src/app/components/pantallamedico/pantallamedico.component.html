@@ -39,18 +39,10 @@
                 </select>
             </div>
             <div class="form-group" >
-                <label for="date">Fecha</label>
+                <label for="date">Dia</label>
                 <select class="form-control">
                     <div *ngFor="let date of this.dates">
                         <option value="{{date}}">{{date}}</option>
-                    </div>
-                </select>
-            </div>
-            <div class="form-group" >
-                <label for="turnos">Turnos</label>
-                <select class="form-control">
-                    <div *ngFor="let turno of this.horario">
-                        <option value="{{turno}}">{{turno}}</option>
                     </div>
                 </select>
             </div>
